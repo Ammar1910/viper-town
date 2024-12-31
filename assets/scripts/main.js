@@ -1,3 +1,4 @@
+
 $("#read-more").on("click", function () {
     let newHeight = $(".information .description > p").height();
 
@@ -162,7 +163,7 @@ function onPlayerReady() {
 
     $('#sounds').on("change", function () {
         muted = !muted;
-        clearInterval(interval)
+        
         if (muted) {
             let volume = 0.4;
             interval = setInterval(() => {
@@ -196,11 +197,10 @@ function copyToClipboard(text) {
 
     area.value = text;
     area.select();
-    document.execCommand('copy');
+    
 
     body.removeChild(area);
 }
 
 setup();
-
 
